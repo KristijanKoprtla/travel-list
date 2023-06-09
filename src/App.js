@@ -25,7 +25,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="app">
       <Logo />
       <Form onAddItems={handleAddItem} />
       <PackingList
@@ -33,7 +33,7 @@ function App() {
         onDeleteItems={handleDeleteItem}
         onToggleItem={handleToggleItem}
       />
-      <Stats />
+      <Stats items={items} />
     </div>
   );
 }
