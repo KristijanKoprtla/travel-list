@@ -1,10 +1,10 @@
-const Item = ({ item }) => {
+const Item = ({ item, onDeleteItems }) => {
   return (
     <li>
       <span style={item.packed ? { textDecoration: "line-through" } : {}}>
         {item.quantity} {item.description}
       </span>
-      <button>❌</button>
+      <button onClick={() => onDeleteItems(item.id)}>❌</button>
     </li>
   );
 };
